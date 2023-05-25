@@ -1,0 +1,32 @@
+    1  cd maven-experiment/
+    2  ls
+    3  tree
+    4  sudo dfn install tree
+    5  sudo dnf install tree -y
+    6  tree 
+    7  aws configure
+    8  mvn compile
+    9  tree
+   10  mvn clean 
+   11  mvn test
+   12  mvn clean
+   13  mvn package
+   14  tree
+   15  java -jar target/maven-experiment-1.0-SNAPSHOT.jar 
+   16  mvn clean
+   17  mvn package
+   18  tree
+   19  java -jar target/maven-experiment-1.0-SNAPSHOT-jar-with-dependencies.jar 
+   20  mvn clean package
+   21  java -jar target/maven-experiment-1.0-SNAPSHOT-jar-with-dependencies.jar 
+   22  mvn clean package
+   23  java -jar target/maven-experiment-1.0-SNAPSHOT-jar-with-dependencies.jar 
+   24  mvn install
+   25  mvn clean package > log.txt
+   26  mvn clean site 
+   27  sudo dnf install -y httpd
+   28  sudo systemctl start httpd
+   29  sudo systemctl enable httpd
+   30  sudo cp -a target/site/. /var/www/html/
+   31  register > register.txt
+   32  history > history.txt
