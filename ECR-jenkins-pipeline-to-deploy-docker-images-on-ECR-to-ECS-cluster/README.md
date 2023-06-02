@@ -324,7 +324,7 @@ git push
 aws ecs create-cluster --cluster-name to-do-app
 ```
 
-- Create a task definition file and name it as to-do-app.json. Don't forget the `<aws-account-id>` parts.
+- Create a task definition file and name it as to-do-app.json. Don't forget the `768013060882` parts.
 
 ```json
 {
@@ -332,7 +332,7 @@ aws ecs create-cluster --cluster-name to-do-app
 	"networkMode": "awsvpc",
 	"containerDefinitions": [{
 		"name": "to-do-app",
-		"image": "<aws-account-id>.dkr.ecr.us-east-1.amazonaws.com/clarusway/to-do-app:latest",
+		"image": "768013060882.dkr.ecr.us-east-1.amazonaws.com/clarusway/to-do-app:latest",
 		"portMappings": [{
 			"containerPort": 3000,
 			"protocol": "tcp"
@@ -344,7 +344,7 @@ aws ecs create-cluster --cluster-name to-do-app
 	],
 	"cpu": "256",
 	"memory": "512",
-        "executionRoleArn": "arn:aws:iam::<aws-account-id>:role/ecsTaskExecutionRole"
+        "executionRoleArn": "arn:aws:iam::768013060882:role/ecsTaskExecutionRole"
 }
 ```
 
@@ -383,7 +383,7 @@ aws ecs create-service --cluster to-do-app --service-name to-do-app-service --ta
 pipeline {
     agent any
     environment {
-        ECR_REGISTRY = "<aws-account-id>.dkr.ecr.us-east-1.amazonaws.com"
+        ECR_REGISTRY = "768013060882.dkr.ecr.us-east-1.amazonaws.com"
         APP_REPO_NAME= "clarusway/to-do-app"
     }
     stages {
