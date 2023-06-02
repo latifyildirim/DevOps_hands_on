@@ -71,7 +71,7 @@ Encryption settings     : Disable
 - Copy the Jenkins URL from the AWS Management Console, paste it into `Payload URL` field, add `/github-webhook/` at the end of URL, and click on `Add webhook`.
 
 ```text
-http://ec2-54-144-151-76.compute-1.amazonaws.com:8080/github-webhook/
+http://44.197.183.160:8080/github-webhook/
 ```
 
 ## Part 3 - Creating Jenkins Pipeline for the Project with GitHub Webhook
@@ -87,7 +87,7 @@ http://ec2-54-144-151-76.compute-1.amazonaws.com:8080/github-webhook/
 - Put a checkmark on `GitHub Project` under `General` section, enter URL of the project repository.
 
 ```text
-https://github.com/xxxxxxxx/todo-app-node-project.git
+https://github.com/latifyildirim/todo-app-node-project.git
 ```
 
 - Put a checkmark on `GitHub hook trigger for GITScm polling` under `Build Triggers` section.
@@ -99,7 +99,7 @@ https://github.com/xxxxxxxx/todo-app-node-project.git
 - Enter URL of the project repository, and let others be default.
 
 ```text
-https://github.com/xxxxxxxxxxx/todo-app-node-project.git
+https://github.com/latifyildirim/todo-app-node-project.git
 ```
 - It shows "Failed to connect to repository :... " message. To give access to github repository click Add and select Jenkins. 
 ```
