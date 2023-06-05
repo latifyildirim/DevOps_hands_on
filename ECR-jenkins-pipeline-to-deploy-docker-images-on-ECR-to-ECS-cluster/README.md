@@ -268,10 +268,10 @@ Press "i" to edit
 - First press "dG" to delete all
 
 ```groovy
-  pipeline {
+pipeline {
     agent any
     environment {
-        ECR_REGISTRY = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com"
+        ECR_REGISTRY = "768013060882.dkr.ecr.us-east-1.amazonaws.com"
         APP_REPO_NAME= "clarusway/to-do-app"
     }
     stages {
@@ -372,7 +372,7 @@ aws ecs list-task-definitions
 - Create a service with following command.
 
 ```bash
-aws ecs create-service --cluster to-do-app --service-name to-do-app-service --task-definition to-do-app --desired-count 1 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-077c9758],securityGroups=[sg-e29b36ce],assignPublicIp=ENABLED}" # change the subnets and security group and make sure that the 3000 port is open. 
+aws ecs create-service --cluster to-do-app --service-name to-do-app-service --task-definition to-do-app --desired-count 1 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-085b5d752b79bd6d2],securityGroups=[sg-0df72f6225ba17c3d],assignPublicIp=ENABLED}" # change the subnets and security group and make sure that the 3000 port is open. 
 ```
 
 > Note: securityGroups=[sg-e29b36ce] is default sg. If we don't specify any sg, aws assign default sg to the cluster. Port #3000 should be allowed on the sg.
