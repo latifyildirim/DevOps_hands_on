@@ -17,6 +17,13 @@ data:
           severity: slack
         annotations:
           summary: High Memory Usage
+      - alert: High Pod Count
+        expr: sum(kubelet_running_pods) > 20
+        for: 1m
+        labels:
+          severity: critic
+        annotations:
+          summary: High Pod Count
   prometheus.yml: |-
     global:
       scrape_interval: 5s

@@ -1,0 +1,76 @@
+    1  k get sa
+    2  k get sa -A
+    3  kubectl create namespace prometheus
+    4  k get sa -A
+    5  kubectl get pods/myng -o yaml
+    6  kubectl run myng --image=nginx
+    7  kubectl get pods/myng -o yaml
+    8  kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mysa
+EOF
+
+    9  kubectl get sa
+   10  kubectl get serviceaccounts/mysa -o yaml
+   11  mkdir RBAC && cd RBAC
+   12  kk api-resorces -o wide
+   13  kk api-resources -o wide
+   14  k api-resources -o wide
+   15  kubectl apply -f myclusterrole.yaml
+   16  kubectl apply -f myrole.yaml
+   17  k get role
+   18  kubectl apply -f myclusterrole.yaml
+   19  kubectl get clusterrole
+   20  k apply -f myrolebinding.yaml
+   21  kubectl run mypod --image=clarusway/kubectl
+   22  kubectl exec -it mypod -- sh
+   23  k get po
+   24  k get secret
+   25  k get secret -A
+   26  k get po mygn
+   27  k get po 
+   28  k get po myng
+   29  k get po myng -A
+   30  k get po myng -o yaml
+   31  k describe po myng
+   32  cd ..
+   33  kubectl create namespace prometheus
+   34  cd prom-graf/
+   35  k cluster-info
+   36  k get po
+   37  k api-resorces | less
+   38  kubectl proxy --port=8080 &
+   39* curl localhost:8080 
+   40  curl localhost:8080/api/v1/pods
+   41  curl localhost:8080/api/v1/pods | grep pod
+   42* curl localhost:8080/
+   43  curl localhost:8080/api/healthz
+   44  curl localhost:8080/healthz
+   45  kubectl -v
+   46  kubectl version
+   47  curl localhost:8080/version
+   48  curl localhost:8080/metrics
+   49  k                                   api-resources -o wide
+   50  k                                   api-resources -o wide | grep pod
+   51  k                                   api-resources -o wide | grep ingress
+   52  k                                   api-resources -o wide | grep pods
+   53  k                                   api-resources -o wide | grep deployment
+   54  k apply -f .
+   55  k get po -n prometheus
+   56  k exec -it prometheus-deployment-bf66bf4f-mt6hs -n prometheus -- sh
+   57  k apply -f .
+   58  sudo apt-get install -y adduser libfontconfig1
+   59  wget https://dl.grafana.com/enterprise/release/grafana-enterprise_9.5.2_amd64.deb
+   60  sudo dpkg -i grafana-enterprise_9.5.2_amd64.deb
+   61  sudo systemctl daemon-reload
+   62  sudo systemctl start grafana-server
+   63  sudo systemctl enable  grafana-server
+   64  sudo systemctl status grafana-server
+   65  k get po
+   66  k delete po myng
+   67  k delete -f .
+   68  k apply -f -
+   69  k apply -f .
+   70  history > history.txt
